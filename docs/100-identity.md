@@ -16,8 +16,8 @@
 - **Name:** Sajan Portfolio.
 - **One-line description:** "A personal portfolio site for Sajan."
 - **Kind:** product (software, static web site). [RECOMMEND] No research/business/client/education type applies.
-- **Repository location:** `/home/sajan/Projects/sajan-portfolio` — to become an independent Git repo **only after human approval** of this foundation. Not yet initialized. Workspace gitignore excludes it so it can never be tracked by the workspace repo.
-- **Entry point (once implemented):** `index.html` — static site, no build step; preview via `python3 -m http.server 8088` (port reserved for this project).
+- **Repository location:** `/home/sajan/Projects/sajan-portfolio` — an **independent Git repo**, remote `git@github.com:Er-Sajan-PLG/sajan-portfolio.git`, default branch `main`. Approved and initialized. Workspace gitignore excludes it so it can never be tracked by the workspace repo.
+- **Entry point:** `index.html` — static site, no build step; preview via `python3 -m http.server 8088` (port reserved for this project). **Six pages as of 2026-10-04** — `index.html`, `about.html`, `projects.html`, `services.html`, `experience.html`, `contact.html`. The nav is duplicated in each file because no build step is permitted; see `docs/adr/0004-multi-page-structure.md`.
 - **Status:** seed. [RECOMMEND]
 - **Owner(s):** Sajan (sole owner; authority to make decisions). [FACT]
 - **Version / phase:** initialized for Phase 0 (bare-minimum skeleton), ProjectTemplates 0.1.0. [FACT]

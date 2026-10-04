@@ -14,5 +14,5 @@
 - **Assumptions:** contact details and project list are personal; site is public once deployed (later phase). [ASSUMPTION]
 - **Boundaries (out of scope):** backend, CMS, auth, payments, analytics, vector/graph databases, cloud. [FACT]
 - **Known risks:** minimal for a static site; no secrets live in the repo. [FACT]
-- **Dependencies:** none runtime; workspace governance only for setup. [FACT]
+- **Dependencies:** none runtime. [FACT]
 - **Ethical / confidentiality:** no secrets in code or docs; no personal data beyond what Sajan chooses to publish. [FACT]

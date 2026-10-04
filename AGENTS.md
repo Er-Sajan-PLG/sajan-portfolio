@@ -25,7 +25,6 @@ and the answers in `docs/` are this project's source of truth.
 - No automated tests; verify manually:
   - `python3 -m http.server 8088` from the project root, then open in a browser (port `8088` is reserved for this project).
   - No console errors; internal links and assets resolve.
-- Docs/manifest sync vs the template library: `python3 /home/sajan/Projects/ProjectTemplates/kernel/tpl.py check .`
 
 ## Do NOT do without Sajan's approval
 

@@ -3,66 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio of Sajan — software engineer, researcher, and builder.">
-  <title>Sajan — Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js" defer></script>
+  <meta name="description" content="Sajan Gurung — civil engineer, quantity surveyor and builder in Pokhara, Nepal. Takeoffs, BOQs, AutoCAD drafting, QA/QC documentation and estimating automation.">
+  <title>Sajan Gurung — Civil Engineer &amp; Builder</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>!function(){var t;try{t=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark")}();</script>
+  <link rel="stylesheet" href="css/styles.css?v=5">
+  <script src="js/main.js?v=5" defer></script>
 </head>
 <body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="nav-brand" href="#top">Sajan</a>
+      <a class="nav-brand" href="index.html">Sajan</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to light theme" aria-pressed="true"><svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button></li>
       </ul>
     </nav>
   </header>
 
-  <main id="top">
+  <main id="main">
     <section class="hero">
-      <h1>Hi, I'm Sajan.</h1>
-      <p class="tagline">Software engineer, researcher, and builder. [tagline placeholder — describe what you do]</p>
-      <a class="btn" href="#contact">Get in touch</a>
+      <div class="hero-content">
+        <p class="hero-kicker">BE Civil Engineering · Registered Engineer, Nepal Engineering Council</p>
+        <h1>Hi, I'm Sajan.</h1>
+        <p class="tagline">I'm an engineer and STEM enthusiast who likes building things, learning how they work, and using technology to solve real problems.</p>
+        <p class="hero-typed" aria-hidden="true"><span class="prompt">$</span> <span id="typed-text"></span><span class="caret"></span></p>
+        <p class="visually-hidden">Civil engineer, quantity surveyor, AutoCAD drafter, Python developer and STEM educator.</p>
+        <div class="hero-actions">
+          <a class="btn" href="contact.html">Get in touch</a>
+          <a class="btn btn-ghost" href="services.html">What I do</a>
+        </div>
+        <ul class="stat-strip" id="stat-strip">
+          <li>
+            <span class="stat-num" data-count="2">0</span>
+            <span class="stat-label">ten-storey buildings supervised</span>
+          </li>
+          <li>
+            <span class="stat-num" data-count="6">0</span>
+            <span class="stat-label">own repositories</span>
+          </li>
+          <li>
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-label">languages — Python, C/C++, TypeScript</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>[About placeholder — tell visitors who you are, what you do, and what you care about.]</p>
-    </section>
-
-    <section id="research" class="section">
-      <h2>Research</h2>
-      <p>Pursuing a master's degree in <strong>Material Science</strong>.</p>
-      <p>[Research placeholder — describe your research focus, thesis/project topic, and current stage.]</p>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <p>Selected work from my GitHub.</p>
-      <ul class="project-list" id="project-list"></ul>
-    </section>
-
-    <section id="vision" class="section">
-      <h2>Vision</h2>
-      <p>[Vision placeholder — what do you want to achieve or change long-term?]</p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <ul class="contact-list">
-        <li><a href="https://github.com/Er-Sajan-PLG" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="#" id="linkedin-link" rel="noopener">LinkedIn</a></li>
-        <li><a href="mailto:you@example.com">you@example.com</a></li>
+    <section id="what-i-do" class="section" data-theme="engineering">
+      <h2>What I do</h2>
+      <p class="section-lead">Three threads, one engineer. Pick whichever brought you here.</p>
+      <ul class="link-grid">
+        <li>
+          <a class="link-card" href="services.html" style="--link-accent: #059669">
+            <h3>Engineering services</h3>
+            <p>Quantity takeoff, BOQ and rate analysis, AutoCAD drafting and as-builts, QA/QC documentation — and estimating automation for the jobs you repeat.</p>
+            <span class="link-go">See services →</span>
+          </a>
+        </li>
+        <li>
+          <a class="link-card" href="projects.html" style="--link-accent: #7c3aed">
+            <h3>Software &amp; AI projects</h3>
+            <p>STEMMA, a machine-readable STEM knowledge foundation; PROFESSOR-J and JARVIS, my own agent platforms; LearningHub; and a software auditor.</p>
+            <span class="link-go">See projects →</span>
+          </a>
+        </li>
+        <li>
+          <a class="link-card" href="experience.html" style="--link-accent: #2563eb">
+            <h3>Experience &amp; skills</h3>
+            <p>Two years supervising ten-storey apartment buildings and a structural steel sculpture project, plus land and road planning.</p>
+            <span class="link-go">See experience →</span>
+          </a>
+        </li>
       </ul>
+    </section>
+
+    <section id="featured" class="section" data-theme="innovation">
+      <h2>Selected work</h2>
+      <p class="section-lead">Three of the repositories I would point you at first. The <a href="projects.html">projects page</a> has the rest.</p>
+      <ul class="project-list" id="project-list" data-limit="3"></ul>
+    </section>
+
+    <section id="next" class="section" data-theme="energy">
+      <h2>Where I'm heading</h2>
+      <p>I'm working toward a funded master's in materials science and energy storage for September 2027, while taking on engineering work in the meantime. If you want the long version, it's on the <a href="about.html">about page</a>.</p>
+      <p><a class="btn" href="contact.html">Start a conversation</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Sajan. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Sajan Gurung. All rights reserved.</p>
   </footer>
+
+  <div class="modal" id="project-modal" hidden>
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" data-modal-close aria-label="Close">&times;</button>
+      <p class="modal-kicker" id="modal-kicker"></p>
+      <h3 id="modal-title"></h3>
+      <p class="modal-body" id="modal-body"></p>
+      <a class="btn" id="modal-link" href="#" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+  </div>
 </body>
 </html>
