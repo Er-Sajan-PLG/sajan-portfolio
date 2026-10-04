@@ -12,6 +12,8 @@
 
 ## [Unreleased]
 
+- **Version** (2026-10-04): bumped to **2.0.0**. MAJOR per `docs/VERSIONING.md` — the site contract changed: one page became six, and dark became the default theme. `docs/VERSIONING.md`'s `**Version:**` marker updated to match. [FACT]
+- **Note** (2026-10-04): `docs/VERSIONING.md` §3 prescribes `python3 ../scripts/version_bump.py` and §4 promises a workspace pre-commit / CI check of doc version markers. **Neither exists** — the script is absent and this repo has no `.github/workflows`. The bump above was done by hand. The doc overstates its own enforcement and should be corrected by its owner. [FACT]
 - **Added** (2026-08-15): Project OS bootstrap — 15 documents composed via `tpl compose --type software`. [FACT]
 - **Added** (2026-08-15): bare-minimum static site — `index.html`, `css/styles.css`, `js/main.js`, `AGENTS.md`, `README.md`. [FACT]
 - **Changed** (2026-08-15): local preview server port set to `8088` (reserved for this project; avoids collision with JARVIS 8000/8081/8082 and STEM-TUITION 8085). [FACT]
